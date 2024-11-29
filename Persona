@@ -1,0 +1,17 @@
+public class Persona {
+    protected String nombre, apellido, ID;
+
+    public Persona(String nombre, String apellido, String ID){
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.ID = ID;
+    }
+    public String getNombre() {
+        return nombre;
+    }
+
+
+
+
+
+}
