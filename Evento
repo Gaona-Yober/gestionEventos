@@ -1,0 +1,23 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class Evento {
+    private String nombre;
+    private List<Participante> participantes;
+    private String fecha;
+
+    public Evento(String nombre) {
+        this.nombre = nombre;
+        this.participantes = new ArrayList<>();
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+
+
+    public void agregarParticipante(Participante participante) {
+        participantes.add(participante);
+    }
+}
