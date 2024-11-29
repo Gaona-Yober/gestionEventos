@@ -1,0 +1,4 @@
+public interface IAccionUsuario {
+    void registrarseEnEvento(Evento e);
+    void abandonarEvento(Evento e);
+}
