@@ -1,0 +1,34 @@
+public class Organizador extends Persona implements IAccionUsuario {
+
+    public Organizador(String nombre, String apellido, String ID) {
+        super(nombre, apellido, ID);
+    }
+
+    public Evento crearEvento(String nombreEvento) {
+        Evento nuevoEvento = new Evento(nombreEvento);
+        System.out.println(getNombre() + " ha creado el evento: " + nuevoEvento.getNombre());
+        return nuevoEvento;
+    }
+    public void agregarParticipante(Evento evento, Participante participante) {
+        evento.agregarParticipante(participante);
+        System.out.println(getNombre() + " agregó al participante " + participante.getNombre() + " al evento");
+    }
+    public void agregarDireccion(Direccion direccion){
+        System.out.print("Direccion: "+direccion.getCallePrincipal()+ " & "+direccion.getCalleSecundaria()+ ", sector: "+direccion.getSector()+"\n");
+
+    }
+
+    public void terminarEvento(Evento e, Organizador o){
+        System.out.print("El organizador "+o.nombre+"  a dado por terminado el evento: "+e.getNombre());
+    }
+
+
+    @Override
+    public void registrarseEnEvento(Evento evento) {
+        System.out.println(getNombre() + " está organizando el evento: " + evento.getNombre()+"\n");
+    }
+    @Override
+    public void abandonarEvento(Evento evento) {
+        System.out.println(getNombre() + " dejó de organizar el evento: " + evento.getNombre());
+    }
+}
