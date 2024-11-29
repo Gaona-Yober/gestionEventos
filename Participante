@@ -1,0 +1,18 @@
+public class Participante extends Persona implements IAccionUsuario{
+
+
+    public Participante(String nombre, String apellido, String ID) {
+        super(nombre, apellido, ID);
+    }
+
+    @Override
+    public void registrarseEnEvento(Evento evento) {
+        System.out.print(getNombre()+" a asistido al evento: "+evento.getNombre()+"\n");
+    }
+
+    @Override
+    public void abandonarEvento(Evento evento) {
+        System.out.print(getNombre()+" se a retirado del evento: "+evento.getNombre()+"\n");
+    }
+
+}
